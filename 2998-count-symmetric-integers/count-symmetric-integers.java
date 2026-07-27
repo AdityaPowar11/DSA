@@ -1,38 +1,33 @@
 class Solution {
 
-    static boolean isSym(int i){
+    static boolean isSym(int num, int half) {
+        int sum1 = 0;
+        int sum2 = 0;
 
-        int n = String.valueOf(Math.abs(i)).length()/2;
-
-        int res1=0;
-        int res2=0;
-
-        for(int j =0;j<n;j++){
-            res1= res1+i%10;
-            i=i/10;
+        for (int i = 0; i < half; i++) {
+            sum1 += num % 10;
+            num /= 10;
         }
 
-        for(int j =0;j<n;j++){
-            res2= res2+i%10;
-            i=i/10;
+        for (int i = 0; i < half; i++) {
+            sum2 += num % 10;
+            num /= 10;
         }
 
-        return res1==res2;
-
+        return sum1 == sum2;
     }
+
     public int countSymmetricIntegers(int low, int high) {
+        int count = 0;
 
-        int count =0;
+        for (int i = low; i <= high; i++) {
+            int len = String.valueOf(i).length();
 
-        for( int i = low;i<=high;i++){
-            if(String.valueOf(Math.abs(i)).length()%2==0){
-                if(isSym(i)){
-                    count++;
-                }
+            if (len % 2 == 0 && isSym(i, len / 2)) {
+                count++;
             }
         }
 
         return count;
-        
     }
 }
