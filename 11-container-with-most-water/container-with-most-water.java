@@ -6,9 +6,7 @@ class Solution {
         int right = height.length-1;
 
         int max_water=0;
-
         while(left<right){
-
 
             int curr_water = Math.min(height[left],height[right]) * (right-left);
             max_water = Math.max(max_water,curr_water);
@@ -20,7 +18,6 @@ class Solution {
                 right--;
             }
         }
-
 
 
     return max_water;
