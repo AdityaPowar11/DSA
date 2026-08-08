@@ -8,7 +8,7 @@ This repository serves as a record of my Data Structures and Algorithms (DSA) pr
 
 ## 🛠️ Tech Stack
 
-- **Language:** Java ☕
+- **Languages:** Java ☕ Python 🐍
 - **Platform:** LeetCode
 - **Sync Tool:** LeetSync
 
