@@ -5,7 +5,7 @@ Welcome to my LeetCode repository! This repository is automatically synchronized
 ## 📌 About
 
 This repository serves as a record of my Data Structures and Algorithms (DSA) practice. My goal is to improve problem-solving skills, strengthen algorithmic thinking, and prepare for technical interviews.
-
+and This is my Leetcode : https://leetcode.com/u/adityapowar501/
 ## 🛠️ Tech Stack
 
 - **Languages:** Java ☕ Python 🐍
