@@ -3,17 +3,20 @@ class Solution {
 
         int n = heights.length;
         Stack<Integer> st = new Stack<>();
+
         int[] nse = new int[n];
         int[] pse = new int[n];
 
+        // NSE
         st.push(n - 1);
-
         nse[n - 1] = n;
 
         for (int i = n - 2; i >= 0; i--) {
+
             while (st.size() > 0 && heights[st.peek()] >= heights[i]) {
                 st.pop();
             }
+
             if (st.size() == 0)
                 nse[i] = n;
             else
@@ -22,9 +25,11 @@ class Solution {
             st.push(i);
         }
 
+        // Clear stack
         while (!st.isEmpty())
             st.pop();
 
+        // PSE
         st.push(0);
         pse[0] = -1;
 
@@ -40,16 +45,17 @@ class Solution {
                 pse[i] = st.peek();
 
             st.push(i);
-
         }
+
         int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < n; i++) {
+
             int area = heights[i] * (nse[i] - pse[i] - 1);
+
             max = Math.max(max, area);
         }
 
         return max;
-
     }
 }
