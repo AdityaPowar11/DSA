@@ -40,9 +40,9 @@ class MinStack {
         if (st.isEmpty())
             return -1;
 
-        long q = st.peek();
-        if (q >= min)
-            return (int) q;
+        long p = st.peek();
+        if (p >= min)
+            return (int) p;
         else {
             return (int)min;
         }
