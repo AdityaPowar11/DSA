@@ -33,23 +33,13 @@ Each folder contains:
 
 - Arrays
 - Strings
-- Hashing
 - Two Pointers
 - Sliding Window
 - Binary Search
 - Stack
-- Queue
 - Linked List
-- Trees
 - Binary Search Trees
-- Heaps
 - Recursion
-- Backtracking
-- Dynamic Programming
-- Graphs
-- Greedy Algorithms
-- Bit Manipulation
-- Math
 
 ## 🎯 Goals
 
