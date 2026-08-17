@@ -20,8 +20,10 @@ class Solution {
         }
 
 
+        int j=0;
+
         for(int i=0;i<n-k+1;i++){
-            int j =i;
+            if(j>=i+k) j =i;
             int max =nums[j];
             while(j<i+k){
                 max=nums[j];
