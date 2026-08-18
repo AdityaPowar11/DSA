@@ -19,7 +19,9 @@ class Solution {
             st.push(i);
         }
 
+
         int j=0;
+
         for(int i=0;i<n-k+1;i++){
             if(j>=i+k) j =i;
             int max =nums[j];
