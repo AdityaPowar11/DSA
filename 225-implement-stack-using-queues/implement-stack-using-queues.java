@@ -27,7 +27,7 @@ class MyStack {
     
     public int top() {
 
-        return q.peek();
+        return q.element();
         
     }
     
