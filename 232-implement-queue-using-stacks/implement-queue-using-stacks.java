@@ -9,35 +9,33 @@ class MyQueue {
     
     public void push(int x) {
 
+        if(st.size()==0) st.push(x);
+
+        else{
+
+        while(st.size()>0){
+            rt.push(st.pop());
+        }
         st.push(x);
+
+        while(rt.size()>0){
+            st.push(rt.pop());
+        }
+
+
+
+        }
+
         
     }
     
     public int pop() {
-
-        while(st.size()>0){
-            rt.push(st.pop());
-        }
-        int val = rt.pop();
-        while(rt.size()>0){
-            st.push(rt.pop());
-        }  
     
-        return val;
+        return st.pop();
     }
     
     public int peek() {
-
-        while(st.size()>0){
-            rt.push(st.pop());
-        }
-        
-        int top = rt.peek();
-         while(rt.size()>0){
-            st.push(rt.pop());
-        }       
-
-        return top;
+        return st.peek();
     }
     
     public boolean empty() {
