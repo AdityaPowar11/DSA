@@ -3,10 +3,8 @@ class MyQueue {
     Stack<Integer> st = new Stack<>();
     Stack<Integer> rt = new Stack<>();
 
-    public MyQueue() {
-        
+    public MyQueue() {     
     }
-    
     public void push(int x) {
 
         if(st.size()==0) st.push(x);
@@ -21,12 +19,8 @@ class MyQueue {
         while(rt.size()>0){
             st.push(rt.pop());
         }
-
-
-
         }
-
-        
+ 
     }
     
     public int pop() {
