@@ -6,22 +6,6 @@ This repository contains my solutions to problems solved on **LeetCode**, primar
 
 🔗 **LeetCode Profile:** [Aditya Powar](https://leetcode.com/u/adityapowar501/)
 
----
-
-## 🔥 Recently Solved
-
-<!-- RECENT_SOLUTIONS_START -->
-
-| # | Problem | Last Updated |
-|---:|---|---|
-| 143 | [Reorder List](143-reorder-list) | 2026-08-20 |
-
-<!-- RECENT_SOLUTIONS_END -->
-
-> This section is automatically updated from the repository's Git history whenever new solutions are pushed.
-
----
-
 ## 🎯 Why This Repository?
 
 I'm not solving problems just to increase the problem count. My focus is on:
