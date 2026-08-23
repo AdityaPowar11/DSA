@@ -2,10 +2,7 @@ class Solution {
     public boolean isIsomorphic(String s, String t) {
 
         HashMap<Character,Character> mp = new HashMap<>();
-        
-        if(s.length()==31000){
-            return !(t.charAt(t.length()-3)=='@');
-        }
+        HashSet <Character> h = new HashSet<>();
 
         for(int i=0;i<s.length();i++){
             Character ch = s.charAt(i);
@@ -14,11 +11,12 @@ class Solution {
                 if(mp.get(ch) != tch) 
                         return false;
                  } 
-                 else if(mp.containsValue(tch)){
+                 else if(h.contains(tch)){
                     return false;
                     }
                  else 
                  mp.put(ch,tch);
+                 h.add(tch);
         }
 
         return true;
