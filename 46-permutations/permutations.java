@@ -13,8 +13,8 @@ class Solution {
         if(idx ==n-1){
             List<Integer> l = new ArrayList<>();
 
-            for(int i =0;i<n;i++){
-                l.add(nums[i]);
+            for(int i :nums){
+                l.add(i);
             }
             ans.add(l);
             return ;
