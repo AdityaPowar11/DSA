@@ -6,7 +6,7 @@ class Solution {
         nums[j] =temp;
     }
 
-    public void solution(int nums[],int idx ,List<List<Integer>> ans){
+    void solution(int nums[],int idx ,List<List<Integer>> ans){
 
         int n = nums.length;
 
