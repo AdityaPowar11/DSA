@@ -1,12 +1,12 @@
 class Solution {
 
-    static void swap(int i ,int j ,int[]nums){
+    void swap(int i ,int j ,int[]nums){
         int temp = nums[i];
         nums[i] =nums[j];
         nums[j] =temp;
     }
 
-    public static void solution(int nums[],int idx ,List<List<Integer>> ans){
+    public void solution(int nums[],int idx ,List<List<Integer>> ans){
 
         int n = nums.length;
 
