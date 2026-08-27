@@ -10,7 +10,7 @@ class Solution {
 
         int n = nums.length;
 
-        if(idx ==n-1){
+        if(idx ==n){
             List<Integer> l = new ArrayList<>();
 
             for(int i :nums){
