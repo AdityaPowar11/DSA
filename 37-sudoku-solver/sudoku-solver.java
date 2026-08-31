@@ -4,7 +4,6 @@ class Solution {
 
     public boolean isValid(char[][] board, int row, int col, char num) {
         //check row
-        // check column
         for (int i = 0; i < 9; i++) {
             if (i != row && board[i][col] == num)
                 return false;
@@ -15,8 +14,6 @@ class Solution {
             if (j != col && board[row][j] == num)
                 return false;
         }
-
-        // check 3 x 3 box
         int sRow = row / 3 * 3;
         int sCol = col / 3 * 3;
 
