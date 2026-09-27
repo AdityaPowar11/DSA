@@ -20,7 +20,7 @@ class Solution {
         arr.add(root.val);
         helper(root.left,targetSum-root.val,arr, ans);
         helper(root.right,targetSum-root.val,arr, ans);
-        if (!arr.isEmpty())arr.remove(arr.size() - 1);
+        arr.remove(arr.size() - 1);
     }
 
 
