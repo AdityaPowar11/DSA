@@ -5,9 +5,7 @@ class Solution {
 
         if(root.left==null && root.right==null && root.val==targetSum){
 
-            arr.add(root.val);
-
-            if(root.val==targetSum){
+                arr.add(root.val);
 
                 List<Integer> a = new ArrayList<>();
 
@@ -15,8 +13,6 @@ class Solution {
                     a.add(arr.get(i));
                 }
                 ans.add(a);
-                
-            }
             if (!arr.isEmpty()) arr.remove(arr.size() - 1);
             return;
         }
