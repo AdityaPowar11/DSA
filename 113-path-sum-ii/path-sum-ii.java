@@ -3,7 +3,7 @@ class Solution {
     void helper(TreeNode root, int targetSum, List<Integer> arr,List<List<Integer>> ans){
         if(root==null)return;
 
-        if(root.left==null && root.right==null){
+        if(root.left==null && root.right==null && root.val==targetSum){
 
             arr.add(root.val);
 
