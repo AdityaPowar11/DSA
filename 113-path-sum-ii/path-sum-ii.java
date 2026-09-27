@@ -13,7 +13,7 @@ class Solution {
                     a.add(arr.get(i));
                 }
                 ans.add(a);
-            if (!arr.isEmpty()) arr.remove(arr.size() - 1);
+            arr.remove(arr.size() - 1);
             return;
         }
 
