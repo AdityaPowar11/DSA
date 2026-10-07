@@ -1,57 +1,48 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        
-        int size1 =0;
-        int size2 =0;
 
-        ListNode temp1= headA;
-        ListNode temp2= headB;
+        ListNode t1 = headA;
+        ListNode t2 = headB;
 
-        while(temp1!=null){
-            temp1=temp1.next;
-            size1++;
-        }
-        while(temp2!=null){
-            temp2=temp2.next;
-            size2++;
+        int count=0;
+        int count2 = 0;
+
+        while(t1!=null){
+            t1 = t1.next;
+            count++;
         }
 
-        temp1= headA;
-        temp2= headB;
+        while(t2 != null){
+            t2 = t2.next;
+            count2++;
+        }
 
-        if(size1>size2){
-
-        int n = size1-size2;
-
-            for(int i =1;i<=n;i++){
-                temp1 =temp1.next;
-            }
+        int n ;
+        ListNode temp;
+        ListNode temp2;
+        if(count > count2){
+            n = count - count2;
+            temp = headA;
+            temp2 = headB;
         }
         else{
-
-            int n = size2-size1;
-            for(int i =1;i<=n;i++){
-                temp2 =temp2.next;
-            }
+            n= count2 - count;
+            temp = headB;
+            temp2 = headA;
         }
 
-        while(temp1!=temp2){
-
-            temp1 =temp1.next;
-            temp2=temp2.next;
+        for(int i =0;i<n;i++){
+            temp = temp.next;
         }
-   
-        return temp1;
+
+
+        while(temp!=temp2){
+            temp =temp.next;
+            temp2 = temp2.next;
+        }
+
+        return temp;
+
+        
     }
 }
