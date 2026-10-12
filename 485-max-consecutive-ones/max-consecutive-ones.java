@@ -5,12 +5,13 @@ class Solution {
         for(int i=0; i<nums.length;i++){
             if(nums[i]==1){
                 count++;
-                maxi = Math.max(maxi,count);
+
             }
             else{
+                maxi = Math.max(maxi,count);
                 count = 0;
             }
         }
-        return maxi;
+        return Math.max(count,maxi);
     }
 }
