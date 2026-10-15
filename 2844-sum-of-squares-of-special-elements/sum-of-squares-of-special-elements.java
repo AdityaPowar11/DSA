@@ -5,8 +5,7 @@ class Solution {
         int sum =0;
 
         for( int i =0;i<n;i++){
-                int div = i+1;
-                if(n % div ==0){
+                if(n % (i+1) ==0){
                     sum = sum + (nums[i]*nums[i]);
                 }
 
