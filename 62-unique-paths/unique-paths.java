@@ -1,6 +1,7 @@
 class Solution {
     public int uniquePaths(int m, int n) {
           int [][] dp = new int[2][n];
+          
           for(int j =0;j<n;j++){
             dp[0][j]=1;
             dp[1][j]=1;
@@ -20,6 +21,7 @@ class Solution {
             }
  
           }
+
           return Math.max(dp[0][n-1],dp[1][n-1]);  
     }
 }
