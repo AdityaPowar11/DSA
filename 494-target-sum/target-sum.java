@@ -1,30 +1,36 @@
 class Solution {
-    int ways(int idx,int target,int[]nums){
+    static int sum;
+    int ways(int idx,int target,int res,int[]nums,int[][]dp){
 
         if(idx==nums.length){
-            if(target==0)return 1;
+            if(res==target)return 1;
             else return 0;
         }
 
-        // if(dp[idx][target]!=Integer.MAX_VALUE)return dp[idx][target];
+        if(dp[idx][res+sum]!=-1)return dp[idx][res+sum];
 
-        int add = ways(idx+1,target-nums[idx],nums);
-        int sub = ways(idx+1,target+nums[idx],nums);
+        int add = ways(idx+1,target,res-nums[idx],nums,dp);
+        int sub = ways(idx+1,target,res+nums[idx],nums,dp);
 
-        return  add + sub;
+        return add + sub;
 
     }
 
     public int findTargetSumWays(int[] nums, int target) {  
 
-        // int [][]dp =new int[nums.length][1];
-        // for(int i =0;i<dp.length;i++){
-        //     for(int j=0;j<dp[0].length;j++)
-        //     dp[i][j]=Integer.MAX_VALUE;
-        // }
+        
+        sum =0;
+        for(int n :nums){
+            sum+=n;
+        }
 
-        int ans = ways(0,target,nums);
-        // if(ans==0)return -1;
-        return ans;
+        int [][]dp =new int[nums.length][2*sum+1];
+
+        for(int i =0;i<dp.length;i++){
+            for(int j=0;j<dp[0].length;j++)
+            dp[i][j]=-1;
+        }
+
+        return ways(0,target,0,nums,dp);
     }
 }
