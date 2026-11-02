@@ -12,7 +12,7 @@ class Solution {
         int add = ways(idx+1,target,res-nums[idx],nums,dp);
         int sub = ways(idx+1,target,res+nums[idx],nums,dp);
 
-        return add + sub;
+        return dp[idx][res+sum] = add + sub;
 
     }
 
