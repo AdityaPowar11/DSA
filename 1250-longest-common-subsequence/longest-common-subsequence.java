@@ -1,10 +1,10 @@
 class Solution {
 
     public int longestCommonSubsequence(String text1, String text2) {
-
-        int dp[][] = new int [text1.length() +1][text2.length()+1];
         int n =text1.length();
         int m =text2.length();
+        int dp[][] = new int [n +1][m+1];
+
 
         for(int i =n-1;i>=0;i--){
             for(int j=m-1;j>=0;j--){
