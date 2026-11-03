@@ -1,6 +1,6 @@
 class Solution {
-        public int longestPalindromeSubseq(String s) {
-
+  
+    public int minInsertions(String s) {
         StringBuilder s1 = new StringBuilder(s);
         StringBuilder reversed = new StringBuilder(s).reverse();
 
@@ -17,13 +17,8 @@ class Solution {
                 }
             }
         }
-        return dp[0][0];
-        
-    }
-    public int minInsertions(String s) {
 
-        return s.length() - longestPalindromeSubseq(s);
-
+        return s.length() - dp[0][0];
 
         
         
