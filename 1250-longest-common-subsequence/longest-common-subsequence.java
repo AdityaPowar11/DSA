@@ -18,21 +18,21 @@ class Solution {
         }
 
 
-        StringBuilder str = new StringBuilder("");
+        // StringBuilder str = new StringBuilder("");
 
-        int i =m;
-        int j =n;
+        // int i =m;
+        // int j =n;
 
-        while(i>0 && j>0){
+        // // while(i>0 && j>0){
 
-            if(text1.charAt(i-1) == text2.charAt(j-1)) str.append(text1.charAt(i-1));
-            if(dp[i-1][j]>dp[i][j-1]) i--;
-            else j--;
-        }
+        // //     if(text1.charAt(i-1) == text2.charAt(j-1)) str.append(text1.charAt(i-1));
+        // //     if(dp[i-1][j]>dp[i][j-1]) i--;
+        // //     else j--;
+        // // }
 
-        str.reverse();
+        // // str.reverse();
 
-        System.out.println(str);
+        // // System.out.println(str);
 
         return dp[m][n];
 
