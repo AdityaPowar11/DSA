@@ -1,7 +1,10 @@
 class Solution {
 
-    String lcs(String str1 ,String str2){
-        
+
+    public String shortestCommonSupersequence(String str1, String str2) {
+
+
+
         int m = str1.length();
         int n = str2.length();
 
@@ -34,18 +37,12 @@ class Solution {
 
         str.reverse();
 
-        return str.toString();
-
-    }
-
-    public String shortestCommonSupersequence(String str1, String str2) {
-
-        StringBuilder lcs = new StringBuilder(lcs(str1,str2));
+        StringBuilder lcs = new StringBuilder(str);
         StringBuilder ans = new StringBuilder("");
         System.out.println(lcs);
 
-        int i =0;
-        int j =0;
+        i =0;
+        j =0;
         int k =0;
 
         while( k < lcs.length()){
