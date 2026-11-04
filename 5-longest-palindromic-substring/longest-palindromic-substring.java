@@ -6,6 +6,7 @@ class Solution {
         int j;
         int[][]dp = new int [n][n];
         int max=0;
+         String ans="";
 
         for (int k =0 ; k < n; k++) {
             i = 0;
@@ -25,20 +26,8 @@ class Solution {
                         }
                     }
                 }
-                i++;
-                j++;
 
-            }
-
-        }
-
-        String ans="";
-
-            for (int k = 0; k < n; k++) {
-            i = 0;
-            j = k;
-            while (j < n) {
-
+                
                 if (dp[i][j]==1) {
                     if(j-i>=max){
                         max=j-i;
