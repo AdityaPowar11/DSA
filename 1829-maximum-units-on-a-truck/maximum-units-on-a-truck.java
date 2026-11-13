@@ -6,12 +6,9 @@ class Solution {
         int totalUnits =0;
 
         for(int box[] : boxTypes){
+            int toTake = Math.min(truckSize,box[0]);
 
-            int noOfBoxes = box[0];
-            int noOfunitsperBoxes = box[1];
-            int toTake = Math.min(truckSize,noOfBoxes);
-
-            totalUnits += toTake * noOfunitsperBoxes;
+            totalUnits += toTake * box[1];
             truckSize -=toTake;
 
             if(truckSize==0)break;
