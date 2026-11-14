@@ -11,6 +11,7 @@ class Solution {
                 jumps++;
                 e=maxIndex;
             }
+            if(e==n-1)return jumps;
             s++;
         }
 
