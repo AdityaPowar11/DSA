@@ -13,18 +13,20 @@ class Solution {
     // }
     public int minCostClimbingStairs(int[] cost) {
 
-        int [] dp = new int[cost.length];
+        int [] dp = new int[3];
         dp[0]=cost[0];
-        dp[1] = cost[1];
+        dp[1] =cost[1];
 
         for(int i =2;i<cost.length;i++){
-            int one_step = cost[i] + dp[i-1];
-            int two_step = cost[i] + dp[i-2];
+            int one_step = cost[i] + dp[0];
+            int two_step = cost[i] + dp[1];
 
-            dp[i] = Math.min(one_step,two_step);
+            dp[2] = Math.min(one_step,two_step);
+            dp[0]=dp[1];
+            dp[1]=dp[2];
         }
 
-        return Math.min(dp[cost.length-1],dp[cost.length-2]);
+        return Math.min(dp[0],dp[1]);
         
     }
 }
