@@ -3,45 +3,43 @@ public class Solution {
 
         ListNode t1 = headA;
         ListNode t2 = headB;
-
-        int count=0;
-        int count2 = 0;
+        int size1=0;
+        int size2=0;
 
         while(t1!=null){
-            t1 = t1.next;
-            count++;
+            t1=t1.next;
+            size1++;
         }
 
-        while(t2 != null){
-            t2 = t2.next;
-            count2++;
+        while(t2!=null){
+            t2=t2.next;
+            size2++;
         }
 
-        int n ;
-        ListNode temp;
-        ListNode temp2;
-        if(count > count2){
-            n = count - count2;
-            temp = headA;
-            temp2 = headB;
+
+        if(size1>size2){
+            t1=headA;
+            t2=headB;
+            for(int i=0;i<size1-size2;i++){
+                t1=t1.next;
+            }
+        
         }
         else{
-            n= count2 - count;
-            temp = headB;
-            temp2 = headA;
+            t1=headA;
+            t2=headB;
+            for(int i=0;i<size2-size1;i++){
+                t2 = t2.next;
+            }
         }
 
-        for(int i =0;i<n;i++){
-            temp = temp.next;
+        while(t1!=t2){
+            t1=t1.next;
+            t2=t2.next;
         }
 
-
-        while(temp!=temp2){
-            temp =temp.next;
-            temp2 = temp2.next;
-        }
-
-        return temp;
+        return t1;
+        
 
         
     }
