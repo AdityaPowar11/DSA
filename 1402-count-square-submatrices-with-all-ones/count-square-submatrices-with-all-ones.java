@@ -1,43 +1,32 @@
 class Solution {
     public int countSquares(int[][] matrix) {
 
-        for(int i =0;i<matrix.length;i++){
+        int m = matrix.length;//3
+        int n = matrix[0].length;//4
 
-            for(int j=0;j< matrix[0].length;j++){
-
-                if(matrix[i][j]==0){
-                    continue;
-                }
-
-                else{
-
-                    int up;
-                    int left;
-                    int diagonal;
-
-                    if(i-1<0) up = 0;
-                    else up = matrix[i-1][j];
-
-                    if(j-1<0) left = 0;
-                    else left = matrix[i][j-1];
-
-                    if(i-1<0 || j-1<0) diagonal = 0;
-                    else diagonal = matrix[i-1][j-1];
-
-                    matrix[i][j] =  1+ Math.min(up,Math.min(left,diagonal));
-
-                }   
-            }
-        }
 
         int sum =0;
-        for(int i =0;i<matrix.length;i++){
-            for(int j=0;j<matrix[0].length;j++){
-                sum+=matrix[i][j];
+
+        for(int i =0;i<m;i++){
+
+            for(int j=0;j<n;j++){
+
+                if(matrix[i][j]==0) continue;
+
+                if(i>0 && j>0){
+                    
+                    matrix[i][j] = matrix[i][j] +  Math.min(matrix[i][j-1],Math.min(matrix[i-1][j],matrix[i-1][j-1]));
+                }
+                sum = sum +  matrix[i][j];
+
+ 
             }
         }
 
+
         return sum;
+
+        
         
     }
 }
